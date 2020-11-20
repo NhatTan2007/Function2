@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[*Bài tập] Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+      <link rel="stylesheet" href="/style.css">
+</head>
+<body onload="displayListOfProducts()">
+      <h3>Add New Product</h3>
+      <div class="inputProductsName">
+            <input type="text" name="nameNewProduct" id="nameNewProduct" placeholder="New Product" style="margin-right:20px; height: 20px;width: 300px;">
+            <button id="btnAddProduct" onclick="addNewProduct()">Add</button>
+      </div>
+      <h3>Display All Product</h3>
+      <br>
+      <table style="border-collapse:collapse;width:600px">
+            <thead>
+                  <tr>
+                        <th colspan="2" style="text-align: left; width: 400px;">Product Name</th>
+                        <th id="numberOfProducts" style="text-align: right;color:rgb(179, 28, 28)"></th>
+                  </tr>
+            </thead>
+            <tbody id="displayProducts" style="height: 200px; overflow-y: scroll">
+
+            </tbody>
+      </table>
+      
+      <script src="/myscript.js"></script>
+</body>
+</html>

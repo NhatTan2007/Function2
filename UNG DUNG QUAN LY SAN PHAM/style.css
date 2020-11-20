@@ -1,0 +1,30 @@
+tr:nth-child(even) {
+      background: rgb(238, 238, 238);
+}
+
+button {
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 0.7rem;
+      background-color: rgb(84, 206, 84);
+      border-radius: 6px;
+      color: white;
+      border: 0px;
+      width: 80px;
+}
+
+.productName{
+      width: 300px;
+      padding: 15px 10px;
+}
+
+.btnEdit .btnDelete {
+      width: 300px;
+}
+
+.inputProductsName{
+      background: rgb(238, 238, 238);
+      width: 450px;
+      text-align: center;
+      padding: 20px 0;
+}
