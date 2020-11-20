@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bài 8</title>
+</head>
+<body>
+      <script>
+
+            function createRandomIntArray(size,minNumber,maxNumber) {
+                  let randomIntArray = [];
+                  for (let i = 0; i < size; i++) {
+                        randomIntArray[i] = Math.floor(Math.random()*maxNumber - minNumber + 1) + minNumber;
+                  }
+                  return randomIntArray;
+            }
+            
+            function reverseArray(array) {
+                  array.reverse();
+            }
+            let randomIntArray = createRandomIntArray(10,5,200);
+            document.write(`Mảng đã tạo ${randomIntArray.join(", ")}<br>`);
+            reverseArray(randomIntArray);
+            document.write(`Mảng đảo ngược ${randomIntArray.join(", ")}`);
+      </script>
+</body>
+</html>

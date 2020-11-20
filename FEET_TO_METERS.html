@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+      Foot: <input type="number" name="footValue" id="footValue" onchange="mainProgram()"> to Meters: <input type="text" name="resultFoot" id="resultMeters" readonly>
+      <hr>
+      Meters <input type="number" name="metersValue" id="metersValue" onchange="mainProgram()"> to Foot: <input type="text" name="resultFoot" id="resultFoot" readonly>
+      <script>
+            function calculatorMetersFromFoot(foot) {
+                  return 0.305*foot;
+            }
+
+            function calculatorFootFromMeters(meter) {
+                  return 3.279*meter;
+            }
+
+            function mainProgram() {
+                  let metersInput = +document.getElementById("metersValue").value;
+                  let footInput = +document.getElementById("footValue").value;
+                  if (!isNaN(metersInput) || metersInput > 0) {
+                        let footConvert = calculatorFootFromMeters(metersInput);
+                        document.getElementById("resultFoot").value = footConvert.toFixed(3);
+                  } 
+                  if (!isNaN(footInput) || footInput > 0) {
+                        let metersConvert = calculatorMetersFromFoot(footInput);
+                        document.getElementById("resultMeters").value = metersConvert.toFixed(3);
+                  }
+            }
+      </script>
+</body>
+</html>

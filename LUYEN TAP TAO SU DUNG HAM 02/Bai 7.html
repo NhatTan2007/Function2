@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bài 7</title>
+</head>
+<body>
+      <script>
+            let inputNumber1;
+            let inputNumber2;
+
+            do {
+                  inputNumber1 = +prompt("Nhập vào số thứ nhất");
+            } while (isNaN(inputNumber1));
+            do {
+                  inputNumber2 = +prompt("Nhập vào số thứ hai");
+            } while (isNaN(inputNumber2));
+
+            function swap2Numbers(number1,number2) {
+                  inputNumber2 = number1;
+                  inputNumber1 = number2;
+            }
+            swap2Numbers(inputNumber1, inputNumber2);
+            document.write(`Các số đã nhập là ${inputNumber1}, ${inputNumber2}`);
+      </script>
+</body>
+</html>

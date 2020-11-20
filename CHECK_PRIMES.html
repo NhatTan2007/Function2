@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>
+            function checkPrimes(number) {
+                  let checkPrime = true;
+                  if (number >= 4) {
+                        for (let i = 2; i <= Math.floor(Math.sqrt(number)); i++) {
+                              if (number % i == 0) {
+                                    checkPrime = false;
+                                    break;
+                              }
+                        }
+                  } else if (number === 1) {
+                        checkPrime = false;
+                  }
+                  return checkPrime;
+            }
+
+            function mainProgram() {
+                  let inputNumber;
+                  do {
+                        inputNumber = +prompt("Nhập vào số bất kỳ: ");
+                  } while (isNaN(inputNumber) || inputNumber <= 0);
+                  if (checkPrimes(inputNumber)) {
+                        alert(`Số ${inputNumber} là số nguyên tố`);
+                  } else {
+                        alert(`Số ${inputNumber} không phải là số nguyên tố`);
+                  }
+                  
+            }
+
+            mainProgram();
+      </script>
+</body>
+</html>

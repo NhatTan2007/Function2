@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bài 3</title>
+</head>
+<body>
+      <script>
+            function calFactorialOfNumber(number) {
+                  if (number === 0) {
+                        return 1;
+                  } else {
+                        let resultFactorialOfNumber = 1;
+                        for (let i = number; i > 0; i--) {
+                              resultFactorialOfNumber *= i;
+                        }
+                        return resultFactorialOfNumber;
+                  }
+            }
+
+            let inputNumber;
+            do {
+                  inputNumber = +prompt("Nhập vào số bất kỳ:");
+            } while (isNaN(inputNumber) || inputNumber < 0);
+            document.write(`Giai thừa của số ${inputNumber} là ${calFactorialOfNumber(inputNumber)}`)
+      </script>
+</body>
+</html>

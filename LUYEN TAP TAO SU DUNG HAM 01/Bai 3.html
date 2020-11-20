@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bài 3</title>
+</head>
+<body onload="inputNumber()">
+      <script>
+            function inputNumber() {
+                  let inputNumber1;
+                  let inputNumber2;
+                  do {
+                        inputNumber1 = +prompt("Nhập vào số thứ nhất");
+                  } while (isNaN(inputNumber1))
+                  do {
+                        inputNumber2 = +prompt("Nhập vào số thứ hai");
+                  } while (isNaN(inputNumber2))
+                  alert(respond(inputNumber1,inputNumber2));
+            }
+
+            function respond(number1, number2) {
+                  if (number1 > number2) {
+                       return "Số thứ nhất lớn hơn số thứ hai";
+                  } else {
+                        return `Tổng 2 số đã nhập là ${number1 + number2}`;
+                  }
+            }
+      </script>
+</body>
+</html>

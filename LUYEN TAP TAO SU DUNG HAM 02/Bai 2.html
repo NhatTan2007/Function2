@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>
+            function calCircuit(radius) {
+                  return 2*radius*Math.PI;
+            }
+
+            function calAreaCircle(radius){
+                  return Math.pow(radius,2)*Math.PI;
+            }
+
+            let inputRadius;
+
+            do {
+                  inputRadius = +prompt("Nhập vào bán kính hình tròn");
+            } while(isNaN(inputRadius) && inputRadius <= 0)
+
+            document.write(`Chu vi hình tròn là: ${calCircuit(inputRadius).toFixed(3)}<br>`);
+            document.write(`Diện tích hình tròn là: ${calAreaCircle(inputRadius).toFixed(3)}`);
+      </script>
+</body>
+</html>

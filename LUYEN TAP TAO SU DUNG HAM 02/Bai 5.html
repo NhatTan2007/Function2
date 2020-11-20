@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bài 5</title>
+</head>
+<body>
+      <script>
+            let inputNumber1;
+            let inputNumber2;
+            let inputNumber3;
+
+            do {
+                  inputNumber1 = +prompt("Nhập vào số thứ nhất");
+            } while (isNaN(inputNumber1));
+            do {
+                  inputNumber2 = +prompt("Nhập vào số thứ hai");
+            } while (isNaN(inputNumber2));
+            do {
+                  inputNumber3 = +prompt("Nhập vào số thứ hai");
+            } while (isNaN(inputNumber3));
+
+            document.write(`Trong các số ${inputNumber1}, ${inputNumber2}, ${inputNumber3} thì số nhỏ nhất là ${findMin(inputNumber1, inputNumber2, inputNumber3)}`);
+
+            function findMin(number1,number2,number3) {
+                  let sampleArray = [number1, number2, number3];
+                  sampleArray.sort(function(a, b) {return a - b});
+                  return sampleArray[0];
+            }
+
+      </script>
+</body>
+</html>

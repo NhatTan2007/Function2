@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>
+            let starNameArray = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+            let constellationNameArray = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+            let nameStarInput = prompt("Nhập vào tên của ngôi sao");
+            serachConstellationName(nameStarInput);
+
+            function serachConstellationName(nameStar) {
+                  let result = findIndexStarNameInArray(nameStar);
+                  if (result === -1) {
+                        alert(`Không tìm thấy tên chòm sao của ${nameStar}`);
+                  } else {
+                        document.write(`Chòm sao của ${nameStar} là ${constellationNameArray[result]}`);
+                  }
+            }
+
+            function findIndexStarNameInArray(nameStar) {
+                  for (let index in starNameArray) {
+                        if (starNameArray[index] === nameStarInput) {
+                              return index;
+                        }
+                  }
+                  return -1;
+            }
+
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bài 9</title>
+</head>
+<body>
+      <script>
+            let inputString = prompt("Nhập vào chuỗi ký tự bất kỳ");
+            let inputCharacter;
+            do {
+                  inputCharacter = prompt("Nhập vào 1 ký tự bất kỳ");
+                  console.log()
+            } while (inputCharacter.length === 0 || inputCharacter.length > 1);
+
+            function timeChracterAppearInString(character,string) {
+                  let countTimeAppear = 0;
+                  for (let value of string) {
+                        if (value === character) {countTimeAppear++;}
+                  }
+                  if (countTimeAppear !== 0) {
+                        return countTimeAppear;
+                  } else {
+                        return -1;
+                  }
+                  
+            }
+            if (timeChracterAppearInString(inputCharacter, inputString) !== -1) {
+                  document.write(`Số lần xuất hiện của ký tự ${inputCharacter} trong chuỗi đã nhập là ${timeChracterAppearInString(inputCharacter, inputString)}`);
+            } else {
+                  document.write(`Ký tự ${inputCharacter} không xuất hiện trong chuỗi đã nhập`);
+            }
+            
+      </script>
+</body>
+</html>

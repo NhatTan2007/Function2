@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Bài 2</title>
+</head>
+<body onload="inputNumber()">
+      <script>
+            function inputNumber() {
+                  let inputNumber;
+                  do {
+                        inputNumber = +prompt("Nhập vào số bất kỳ");
+                  } while (isNaN(inputNumber))
+                  document.write(sampleFuntion(inputNumber));
+
+            }
+
+            function sampleFuntion(number) {
+                  return number+1;
+            }
+      </script>
+</body>
+</html>
