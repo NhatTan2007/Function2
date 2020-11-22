@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>[*Bài tập] Kiểm tra từ đối xứng</title>
+</head>
+<body>
+      <script>
+            function isPalindrome(word,index) {
+                  if (index > (word.length - 1)/2) {
+                        return true
+                  } else if (word[index] === word[word.length - 1 - index]) {
+                        return isPalindrome(word,index + 1);
+                  } else {
+                        return false;
+                  }
+            }
+
+            function mainProgram() {
+                  let wordInput = prompt("Nhập vào từ cần kiểm tra đối xứng");
+                  if (isPalindrome(wordInput,0)) {
+                        document.write(`${wordInput} là chuỗi đối xứng`)
+                  } else {
+                        document.write(`${wordInput} không phải là chuỗi đối xứng`);
+                  }
+            }
+
+            mainProgram();
+      </script>
+</body>
+</html>
