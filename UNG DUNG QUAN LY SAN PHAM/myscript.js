@@ -39,14 +39,16 @@ function displayListOfProducts() {
       displayProducts.innerHTML = "";
       for (let i = 0; i < listOfProducts.length; i++) {
             displayProducts.innerHTML += `
-            <td id="productName_${i}" class="productName">${listOfProducts[i]}</td>
+            <tr><td id="productName_${i}" class="productName">${listOfProducts[i]}</td>
             <td class="btnEdit"><button id="btnEditProductName_${i}" onclick="editNameProduct(${i})">Edit</button></td>
-            <td class="btnDelete" ><button id="btnDeleteProduct_${i}" onclick="deleteProduct(${i})">Delete</button></td>`;
+            <td class="btnDelete" ><button id="btnDeleteProduct_${i}" onclick="deleteProduct(${i})">Delete</button></td></tr>`;
       }
       if (listOfProducts.length === 1) {
             document.getElementById("numberOfProducts").innerHTML = `${listOfProducts.length} product`;
       } else if (listOfProducts.length > 1) {
             document.getElementById("numberOfProducts").innerHTML = `${listOfProducts.length} product`;
+      } else {
+            document.getElementById("numberOfProducts").innerHTML = "";
       }
       
 }
